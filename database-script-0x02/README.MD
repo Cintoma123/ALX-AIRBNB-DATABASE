@@ -2,11 +2,11 @@
 
 This document outlines the seed data for the ALX AirBnB database system, which includes sample data for users, properties, bookings, payments, reviews, and messages.
 
-# Seed.sql Data Purpose*
+# Seed.sql Data Purpose
 
 The seed data provides a starting point for testing and development, allowing you to explore the database schema and relationships between tables.
 
-# Seed.sql Data Tables*
+# Seed.sql Data Tables
 
 The following tables are populated with seed data:
 
