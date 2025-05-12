@@ -17,7 +17,7 @@ The following tables are populated with seed data:
 5. *Reviews*: Sample review data, highlighting user feedback and ratings.
 6. *Messages*: Sample message data, illustrating user communication.
 
-# Seed Data Benefits
+# Seed.sql Data Benefits
 
 The seed data enables you to:
 
