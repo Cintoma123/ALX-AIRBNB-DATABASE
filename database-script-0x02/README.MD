@@ -4,7 +4,7 @@ This document outlines the seed data for the ALX AirBnB database system, which i
 
 # Seed.sql Data Purpose
 
-The seed data provides a starting point for testing and development, allowing you to explore the database schema and relationships between tables.
+The seed data provides a starting point for testing and development, allowing the user to explore the database schema and relationships between tables.
 
 # Seed.sql Data Tables
 
@@ -19,7 +19,7 @@ The following tables are populated with seed data:
 
 # Seed.sql Data Benefits
 
-The seed data enables you to:
+The seed data enables the user to:
 
 - Test database queries and relationships
 - Develop and refine database-driven applications
