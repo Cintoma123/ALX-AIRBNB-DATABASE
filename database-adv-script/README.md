@@ -107,7 +107,7 @@ This directory contains advanced SQL scripts and documentation developed as part
 - Test the performance of queries on the partitioned table (e.g., fetching bookings by date range).
  - Write a brief report on the improvements observed.
 
-📄 *Files:*  
+*Files:*  
 - SQL Script: `partitioning.sql`
 - Report: `partition_performance.md`
 
