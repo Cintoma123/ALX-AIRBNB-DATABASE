@@ -20,3 +20,4 @@ ON
 Booking.user_id = Users.user_id
 INNER JOIN Property 
 ON 
+Booking.booking_id = Payment.booking_id
