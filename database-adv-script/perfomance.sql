@@ -10,6 +10,7 @@ Users.created_at = Property.created_at
 INNER JOIN Payment 
 ON 
 Booking.booking_id = Payment.booking_id;
+WHERE b.StartDate >= '2024-01-01' AND b.EndDate <= '2024-12-31';
 
  --analyzing it 
 
