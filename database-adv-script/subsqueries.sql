@@ -1,5 +1,5 @@
 SELECT
-Property.PropertyID,
+    Property.PropertyID,
     Property.Name,
     Property.Location,
     Property.Type,
