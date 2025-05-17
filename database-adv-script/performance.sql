@@ -1,49 +1,21 @@
--- retrieving of all data 
-SELECT Booking.booking_id , 
-  Users.first_name, 
-  Users.last_name, 
-  Property.description, 
-  Payment.amount, Payment.payment_date
-FROM  Booking
-JOIN 
-  Users ON
-Booking.user_id = Users.user_id 
-JOIN  
-Property ON 
-Users.created_at = Property.created_at
-JOIN Payment 
-Payment ON 
-Booking.booking_id = Payment.booking_id;
+SELECT b.booking_id, b.start_date  u.first_name, u.last_name, `p.description`, p.host_id, p.created_at,  pay.amount, pay.payment_date
+FROM Booking based 
+JOIN Users u ON b.user_id = u.user_id
+JOIN Property `P` ON b.property_id = p.property_id
+JOIN Payment Pay ON b.booking_id = pay.booking_id
 
--- explaining of data
-EXPLAIN 
-  SELECT Booking.booking_id ,
-  Users.first_name, 
-  Users.last_name, Property.description, 
-  Payment.amount, Payment.payment_date
-FROM  Booking
-INNER JOIN Users
-ON 
-Booking.user_id = Users.user_id
-INNER JOIN Property 
-ON 
-Users.created_at = Property.created_at
-INNER JOIN Payment 
-ON 
-Booking.booking_id = Payment.booking_id;
+SELECT b.booking_id, u.first_name, u.last_name, `p.description`, pay.amount, pay.payment_date
+FROM Booking based 
+JOIN Users u ON b.user_id = u.user_id
+JOIN Property `P` ON b.property_id = p.property_id
+JOIN Payment Pay ON b.booking_id = pay.booking_id
+WHERE u.first_name = 'John' AND u.last_name = 'Doe'
+ 
 
-EXPLAIN SELECT Booking.booking_id , Users.first_name, Users.last_name, Property.description, Payment.amount, Payment.payment_date
-FROM  Booking
-INNER JOIN Users
-ON 
-Booking.user_id = Users.user_id
-INNER JOIN Property 
-ON 
-Users.created_at = Property.created_at
-INNER JOIN Payment 
-ON 
-Booking.booking_id = Payment.booking_id;
-
-
-
-
+EXPLAIN ANALYZE SELECT b.booking_id, u.first_name, u.last_name, p.description, pay.amount, pay.payment_date
+FROM Booking based 
+JOIN Users u ON b.user_id = u.user_id
+JOIN Property `P` ON b.property_id = p.property_id
+JOIN Payment Pay ON b.booking_id = pay.booking_id
+WHERE u.first_name = 'John' AND u.last_name = 'Doe'
+ 
